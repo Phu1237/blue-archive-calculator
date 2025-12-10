@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --color-ba-blue-primary: #1289F4;
+  --color-ba-blue-dark: #0065a3;
+  --color-ba-cyan: #00D1FF;
+  --color-ba-bg: #F3F7F9;
+  --color-ba-card-bg: rgba(255, 255, 255, 0.85);
+  --color-ba-text-main: #2D3A4A;
+  --color-ba-text-sub: #6E7C8C;
+  --color-ba-border: #DAE3EA;
+
+  --shadow-sm: 0 2px 8px rgba(18, 137, 244, 0.05);
+  --shadow-md: 0 8px 16px rgba(18, 137, 244, 0.1);
+  --shadow-lg: 0 16px 32px rgba(18, 137, 244, 0.15);
+
+  --radius-lg: 20px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+}
+
+@layer base {
+  body {
+    @apply m-0 font-main bg-ba-bg text-ba-text-main antialiased;
+    background-image:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, transparent 100%),
+      radial-gradient(circle at 10% 10%, rgba(18, 137, 244, 0.03) 0%, transparent 40%);
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
